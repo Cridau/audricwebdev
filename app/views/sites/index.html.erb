@@ -1,6 +1,11 @@
 <% @sites.each do |site|%>
-  <h1><%= link_to site.name, site_path(site) %></h1>
-  <p><%= site.address %></p>
+  <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('https://kitt.lewagon.com/placeholder/cities/shanghai');">
+    <div class="card-description">
+      <div class="into-card-description">
+        <h1><%= link_to site.name, site_path(site) %></h1>
+        <p><%= link_to site.address, site.address %></p>
+      </div>
+    </div>
+  </div>
 <% end %>
-
 <%= link_to "Ajouter un site", new_site_path, class: 'btn btn-primary' %>
