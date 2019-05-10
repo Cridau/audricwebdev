@@ -1,0 +1,8 @@
+<h2><%= @site.name %></h2>
+<p><%= @site.address %></p>
+
+<%= link_to "Modifier", edit_site_path, class: 'btn btn-primary' %>
+<%= link_to "Delete", site_path(@site),
+      method: :delete,
+      data: { confirm: "Are you sure?" }, class: 'btn btn-primary' %>
+<%= link_to "Retour", sites_path, class: 'btn btn-primary' %>

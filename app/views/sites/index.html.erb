@@ -1,0 +1,6 @@
+<% @sites.each do |site|%>
+  <h1><%= link_to site.name, site_path(site) %></h1>
+  <p><%= site.address %></p>
+<% end %>
+
+<%= link_to "Ajouter un site", new_site_path, class: 'btn btn-primary' %>
