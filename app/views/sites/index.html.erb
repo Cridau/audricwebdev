@@ -1,10 +1,14 @@
 <div class="description-dev">
   <h1>Besoin d'un Développeur Web sur Lyon?</h1>
-  <p>Apres 10 ans dans le batiment en tant qu'éléctricient, plombier chauffagiste. J'ai ressenti le besoin de changer, de nouveauter, de relever des défis, de me découvire et aquerrire de nouvelles compétences. Je me suis tout natturelement panché vers la programation et le développement de site web pour les quelles je passionne!</p>
+  <p>Apres 10 ans dans le batiment en tant qu'éléctricient, plombier chauffagiste. J'ai ressenti le besoin de changer, de nouveauter, de relever des défis, de me découvire et aquerrire de nouvelles compétences. Je me suis tout naturelement panché vers la programation et le développement de site web pour les quelles je me passionne!</p>
 
   <p>J'ai commencer par apprendre les basses sur le web pendant mon temps libre, puis j'ai passer une formation à l'école du Wagon, à Lyon, pour apprendre les différent langages de programation pour développer son site.</p>
 
   <p>Toujour à la recherche de nouveaux défis je serrai heureux de vous aidez à relever les vôtres. Et de vous rencontrer dans notre belle ville Lyon.</p>
+</div>
+
+<div class="realisation">
+  <h2>MES RÉALISATIONS</h2>
 </div>
 
 <% @sites.each do |site|%>
@@ -12,7 +16,7 @@
     <div class="card-description">
       <div class="into-card-description">
         <h2><%= link_to site.name, site_path(site) %></h2>
-        <p><%= link_to site.address, site.address %></p>
+        <!-- <p><%= link_to site.address, site.address %></p> -->
       </div>
     </div>
   </div>
