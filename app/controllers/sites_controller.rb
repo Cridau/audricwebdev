@@ -14,9 +14,11 @@ class SitesController < ApplicationController
 
   def create
     @site = Site.new(site_params)
-    @site.save
-
-    redirect_to sites_path
+    if @site.save
+      redirect_to sites_path
+    else
+      render :new
+    end
   end
 
   def edit
@@ -25,9 +27,11 @@ class SitesController < ApplicationController
 
   def update
     @site = Site.find(params[:id])
-    @site.update(site_params)
-
-    redirect_to site_path(@site)
+    if @site.update(site_params)
+      redirect_to site_path(@site)
+    else
+      render :show
+    end
   end
 
   def destroy
@@ -41,5 +45,5 @@ end
 private
 
 def site_params
-  params.require(:site).permit(:name, :address)
+  params.require(:site).permit(:name, :address, :articles)
 end
