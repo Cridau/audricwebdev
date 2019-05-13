@@ -1,6 +1,6 @@
 <div class="conteneur">
   <div class="card" style="width: 18rem;">
-    <img src="https://kitt.lewagon.com/placeholder/cities/shanghai" class="card-img-top" alt="...">
+    <%= cl_image_tag @site.photo, height: 150, width: 287, crop: :fill%>
     <div class="card-body">
       <h1 class="card-title"><%= @site.name %></h1>
       <p class="card-title"><%= link_to @site.address, @site.address %></p>
@@ -16,4 +16,5 @@
           data: { confirm: "Are you sure?" }, class: 'btn btn-primary' %>
   </div>
 </div>
+
 
