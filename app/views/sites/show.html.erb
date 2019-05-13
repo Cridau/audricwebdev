@@ -1,20 +1,19 @@
 <div class="conteneur">
-  <div class="card" style="width: 30rem;">
+  <div class="card" style="width: 18rem;">
     <img src="https://kitt.lewagon.com/placeholder/cities/shanghai" class="card-img-top" alt="...">
     <div class="card-body">
       <h1 class="card-title"><%= @site.name %></h1>
       <p class="card-title"><%= link_to @site.address, @site.address %></p>
-      <p class="card-text">
-Voici mon premier site web. Il est consacré aux huiles essentielle. C'est un site vitrine qui n'a pour le moment qu'un seul scénario, celui d'un utilisateur administrateur. Vous pouvez créer un compte et le tester! Il est pas très folichon, mais c'est un début!</p>
+      <p class="card-text"><%= @site.articles %></p>
       <%= link_to "Visiter le site", @site.address,class: "btn btn-primary" %>
-    <%= link_to "Retour", sites_path, class: 'btn btn-primary' %>
+      <%= link_to "Retour", sites_path, class: 'btn btn-primary' %>
     </div>
   </div>
-</div>
-
   <div class="button">
     <%= link_to "Modifier", edit_site_path, class: 'btn btn-primary' %>
     <%= link_to "Supprimer", site_path(@site),
           method: :delete,
           data: { confirm: "Are you sure?" }, class: 'btn btn-primary' %>
   </div>
+</div>
+
