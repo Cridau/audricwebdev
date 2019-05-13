@@ -45,5 +45,5 @@ end
 private
 
 def site_params
-  params.require(:site).permit(:name, :address, :articles)
+  params.require(:site).permit(:name, :address, :articles, :photo)
 end
