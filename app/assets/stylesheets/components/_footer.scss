@@ -25,3 +25,9 @@
 .footer .fa-heart {
   color: #D23333;
 }
+
+@media all and (max-width: 800px ) {
+  .footer{
+    flex-direction:column;
+  }
+}
