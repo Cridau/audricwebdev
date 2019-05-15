@@ -7,7 +7,7 @@ class SitePolicy < ApplicationPolicy
   end
 
   def show?
-    false #tous les users peuvent voir tous les sites
+    true #tous les users peuvent voir tous les sites
   end
 
   def create?
