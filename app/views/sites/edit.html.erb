@@ -18,8 +18,9 @@
     <%= f.label :articles %>
     <%= f.text_area :articles, class: 'form-control' %>
   </div>
-
-  <%= f.submit "Modifier", class: 'btn btn-primary' %>
+  <% if policy(@site).edit? %>
+    <%= f.submit "Modifier", class: 'btn btn-primary' %>
+  <% end %>
   <%= link_to "Retour", site_path, class: 'btn btn-primary' %>
 <% end %>
 

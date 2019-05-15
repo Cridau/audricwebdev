@@ -18,7 +18,8 @@
     <%= f.label :articles %>
     <%= f.text_area :articles, class: 'form-control' %>
   </div>
-
-  <%= f.submit "Créer", class: 'btn btn-primary' %>
+  <% if policy(Site).create? %>
+    <%= f.submit "Créer", class: 'btn btn-primary' %>
+  <% end %>
   <%= link_to "Retour aux sites", sites_path, class: 'btn btn-primary' %>
 <% end %>
