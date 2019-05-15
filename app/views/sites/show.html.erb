@@ -10,10 +10,14 @@
     </div>
   </div>
   <div class="button">
-    <%= link_to "Modifier", edit_site_path, class: 'btn btn-primary' %>
-    <%= link_to "Supprimer", site_path(@site),
+    <% if policy(@site).update? %>
+      <%= link_to "Modifier", edit_site_path, class: 'btn btn-primary' %>
+    <% end %>
+    <% if policy(@site).destroy? %>
+      <%= link_to "Supprimer", site_path(@site),
           method: :delete,
           data: { confirm: "Are you sure?" }, class: 'btn btn-primary' %>
+    <% end %>
   </div>
 </div>
 
