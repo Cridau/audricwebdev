@@ -44,7 +44,27 @@
 }
 
 @media all and (max-width: 800px){
+  body{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-direction:column;
+  }
   .conteneur-dev{
     flex-direction:column;
+  }
+}
+
+@media all and (max-width: 400px){
+
+  .conteneur-dev{
+    h1{
+      font-size:28px;
+    }
+  }
+  .realisation{
+    h2{
+      font-size:25px;
+    }
   }
 }
