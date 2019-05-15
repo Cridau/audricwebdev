@@ -1,10 +1,20 @@
-<div class="description-dev">
-  <h1>Besoin d'un Développeur Web sur Lyon?</h1>
-  <p>Apres 10 ans dans le batiment en tant qu'éléctricient, plombier chauffagiste. J'ai ressenti le besoin de changer, de nouveauter, de relever des défis, de me découvire et aquerrire de nouvelles compétences. Je me suis tout naturelement panché vers la programation et le développement de site web pour les quelles je me passionne!</p>
+<div class="conteneur-dev">
+  <div class="description-dev">
+    <h1>Besoin d'un Développeur Web Lyonnais?</h1>
+    <p>Apres 10 ans dans le batiment en tant qu'éléctricient, plombier chauffagiste. J'ai ressenti le besoin de changer, de nouveauter, de relever des défis, de me redécouvire et aquerrire de nouvelles compétences. Je me suis tout naturelement panché vers la programation et le développement de site web pour les quelles je me passionne!</p>
 
-  <p>J'ai commencer par apprendre les basses sur le web pendant mon temps libre, puis j'ai passer une formation à l'école du Wagon, à Lyon, pour apprendre les différent langages de programation pour développer son site.</p>
+    <p>J'ai commencé à apprendre les basses sur le web pendant mon temps libre, puis j'ai passé une formation à l'école du Wagon, à Lyon, pour apprendre les différents langages de programation pour développer son site. Je continue à me former et ainsi apporter à mes réalisations plus de fonctionalités.</p>
 
-  <p>Toujour à la recherche de nouveaux défis je serrai heureux de vous aidez à relever les vôtres. Et de vous rencontrer dans notre belle ville Lyon.</p>
+    <p>Toujour à la recherche de nouveaux défis je serrai heureux de vous aidez à relever les vôtres. Et de vous rencontrer dans notre belle ville Lyon.</p>
+  </div>
+  <div class="info-dev">
+      <%= image_tag "profile.jpg" %>
+      <ul>
+        <li>Audric Laroche</li>
+        <li>06 72 03 85 29</li>
+        <li>audric.laroche@gmail.com</li>
+      </ul>
+  </div>
 </div>
 
 <div class="realisation">
@@ -15,9 +25,11 @@
   <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('<%= cl_image_path site.photo, crop: :fill%>');">
     <div class="card-description">
       <div class="into-card-description">
-        <h2><%= link_to site.name, site_path(site) %></h2>
-
-        <!-- <p><%= link_to site.address, site.address %></p> -->
+        <h2><%= site.name%></h2>
+        <p><%= link_to site.address, site.address %></p>
+      </div>
+      <div class="article-site">
+        <p><%= site.articles %></p>
       </div>
     </div>
   </div>
